@@ -1,0 +1,10 @@
+version: '3.7'
+
+services:
+  apache-site:
+    image: httpd:latest
+    container_name: app-apache
+    ports:
+      - "8080:80"
+    volumes:
+      - /home/victor/projects/dio.me/docker_fundamentals/site:/usr/local/apache2/htdocs/

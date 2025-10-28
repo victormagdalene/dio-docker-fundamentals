@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador de Cliques</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    #counter {
+      font-size: 48px;
+      margin: 20px 0;
+      color: #0077cc;
+    }
+
+    #clickButton {
+      padding: 12px 24px;
+      font-size: 18px;
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #clickButton:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Contador de Cliques</h1>
+    <p id="counter">0</p>
+    <button id="clickButton">Clique aqui!</button>
+  </div>
+
+  <script>
+    let count = 0;
+
+    const counterDisplay = document.getElementById('counter');
+    const clickButton = document.getElementById('clickButton');
+
+    clickButton.addEventListener('click', () => {
+      count++;
+      counterDisplay.textContent = count;
+    });
+  </script>
+</body>
+</html>
